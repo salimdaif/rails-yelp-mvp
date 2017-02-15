@@ -2,7 +2,7 @@
 
 <h2> <%= @restaurant.name %> </h2>
 <h4> Amazing <%= @restaurant.category %> restaurant </h4>
-<h4> Join us: <%= @restaurant.address %> </h4>
+<h4> Join us: <%= link_to @restaurant.address, "https://www.google.es/maps/place/" + @restaurant.address %> </h4>
 <h4> Contact us: <%= @restaurant.phone_number %> </h4>
 
 <h2> What people think</h2>
