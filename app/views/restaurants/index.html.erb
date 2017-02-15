@@ -1,0 +1,16 @@
+
+<div class="container text-center">
+  <h2>Restaurants</h2>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item">
+      <% restaurant.reviews.each do |review|%>
+      <span class="badge"> <%= review.rating %> </span>
+      <% end %>
+     <h3> <%= link_to Kramdown::Document.new(restaurant.name).to_html.html_safe, restaurant_path(restaurant) %> </h3>
+    </li>
+  <%end%>
+  </ul>
+</div>
+
+

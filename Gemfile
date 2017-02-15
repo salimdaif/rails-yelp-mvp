@@ -4,10 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-group :development, :test do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
+gem 'kramdown'
+gem 'faker'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
@@ -45,6 +43,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :development do
